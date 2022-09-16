@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html-header">
+</head>
+
+
+<body>
+<header th:replace="fragments :: header">
+</header>
+
+<h2 class="text-center">Välkommen till min lilla SR Radio API Project</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Område</th>
+        <th scope="col">Beskrivning</th>
+        <th scope="col">Datum</th>
+        <th scope="col">Kategori</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="messages, iterator : ${srmessages}">
+        <form action="#" th:action="@{/home/{id}(id = ${messages.getId()})}"  th:method="post" >
+        <th th:text="${iterator.count}" scope="row"></th>
+        <td th:text="${messages.getTitle()}"></td>
+        <td th:text="${messages.getDescription()}"></td>
+        <td th:text="${messages.getCreateddate()}"></td>
+        <td th:text="${messages.getSubcategory()}"></td>
+        <td> <button type="submit" class="btn btn-primary btn-sm" value="Save">Save</button></td>
+        </form>
+    </tr>
+    </tbody>
+</table>
+
+
+<h6 class="text-center">Copyright Sveriges Radio 2022. All rights reserved.</h6>
+</body>
+</html>
