@@ -4,6 +4,8 @@ import com.example.sverigesradioapi.model.entity.SRMessage;
 import com.example.sverigesradioapi.model.SRNews;
 import com.example.sverigesradioapi.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,8 +20,8 @@ public class NewsApiController {
     MessageService messageService;
 
     @GetMapping
-    public SRNews getAllSRNews(){
-        return messageService.getAllSRNews();
+    public ResponseEntity<SRNews> getAllSRNews(){
+        return ResponseEntity.ok(messageService.getAllSRNews());
     }
 
 
