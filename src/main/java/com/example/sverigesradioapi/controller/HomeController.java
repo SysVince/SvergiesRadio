@@ -1,6 +1,6 @@
-package com.example.sverigesradiodemo.controller;
+package com.example.sverigesradioapi.controller;
 
-import com.example.sverigesradiodemo.service.MessageService;
+import com.example.sverigesradioapi.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,17 +20,16 @@ public class HomeController {
     }
 
     @PostMapping("/{id}")
-    public String saveMessage(@PathVariable ("id") int messageId, Model model){
+    public String saveMessage(@PathVariable ("id") int messageId){
         messageService.saveMessage(messageId);
-        model.addAttribute("srmessages", messageService.getAllSRNews().getMessages());
-        return "home";
+
+        return "redirect:/home";
     }
 
     @DeleteMapping("/delete/{id}")
-    public String deleteMessage(@PathVariable ("id") int messageId, Model model){
+    public String deleteMessage(@PathVariable ("id") int messageId){
         messageService.deleteMessage(messageId);
-        model.addAttribute("srmessages", messageService.findAll());
-        return "savedmessages";
+        return "redirect:/home/saved";
     }
 
     @GetMapping("/saved")

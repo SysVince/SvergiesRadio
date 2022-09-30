@@ -1,8 +1,8 @@
-package com.example.sverigesradiodemo.service;
+package com.example.sverigesradioapi.service;
 
-import com.example.sverigesradiodemo.model.sverigesradio.SRMessage;
-import com.example.sverigesradiodemo.model.sverigesradio.SRNews;
-import com.example.sverigesradiodemo.repository.SRMessageRepository;
+import com.example.sverigesradioapi.model.entity.SRMessage;
+import com.example.sverigesradioapi.model.SRNews;
+import com.example.sverigesradioapi.repository.SRMessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -33,6 +33,7 @@ public class MessageService {
                 .exchangeToMono(clientResponse -> clientResponse.bodyToMono(SRNews.class))
                 .block(); //Synkront, annars är webclient asynkront
 
+        assert srNews != null;
         for (SRMessage srMessage : srNews.getMessages()) {
             String convertedDate = dateConverter.microsoftDateToJavaDate(srMessage.getCreateddate());
             srMessage.setCreateddate(convertedDate);

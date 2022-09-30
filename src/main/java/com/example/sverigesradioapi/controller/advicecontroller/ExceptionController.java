@@ -1,4 +1,4 @@
-package com.example.sverigesradiodemo.controller.advicecontroller;
+package com.example.sverigesradioapi.controller.advicecontroller;
 
 import org.springframework.ui.Model;
 import org.springframework.web.HttpRequestMethodNotSupportedException;

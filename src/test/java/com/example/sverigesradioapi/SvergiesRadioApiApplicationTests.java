@@ -1,10 +1,10 @@
-package com.example.sverigesradiodemo;
+package com.example.sverigesradioapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SvergiesRadioDemoApplicationTests {
+class SvergiesRadioApiApplicationTests {
 
     @Test
     void contextLoads() {

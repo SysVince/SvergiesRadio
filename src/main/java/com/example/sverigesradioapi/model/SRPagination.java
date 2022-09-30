@@ -1,4 +1,4 @@
-package com.example.sverigesradiodemo.model.sverigesradio;
+package com.example.sverigesradioapi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

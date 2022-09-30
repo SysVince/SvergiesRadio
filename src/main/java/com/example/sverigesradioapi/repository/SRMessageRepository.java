@@ -1,8 +1,7 @@
-package com.example.sverigesradiodemo.repository;
+package com.example.sverigesradioapi.repository;
 
-import com.example.sverigesradiodemo.model.sverigesradio.SRMessage;
+import com.example.sverigesradioapi.model.entity.SRMessage;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

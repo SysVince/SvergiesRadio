@@ -1,6 +1,5 @@
-package com.example.sverigesradiodemo.service;
+package com.example.sverigesradioapi.service;
 
-import com.example.sverigesradiodemo.model.sverigesradio.SRMessage;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;

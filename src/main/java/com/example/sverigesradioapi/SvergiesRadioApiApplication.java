@@ -1,4 +1,4 @@
-package com.example.sverigesradiodemo;
+package com.example.sverigesradioapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,7 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
-public class SvergiesRadioDemoApplication {
+public class SvergiesRadioApiApplication {
 
     @Bean
     public WebClient webClient(){
@@ -21,7 +21,7 @@ public class SvergiesRadioDemoApplication {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(SvergiesRadioDemoApplication.class, args);
+        SpringApplication.run(SvergiesRadioApiApplication.class, args);
     }
 
 }

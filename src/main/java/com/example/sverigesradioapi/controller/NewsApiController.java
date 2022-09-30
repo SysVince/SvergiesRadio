@@ -1,8 +1,8 @@
-package com.example.sverigesradiodemo.controller;
+package com.example.sverigesradioapi.controller;
 
-import com.example.sverigesradiodemo.model.sverigesradio.SRMessage;
-import com.example.sverigesradiodemo.model.sverigesradio.SRNews;
-import com.example.sverigesradiodemo.service.MessageService;
+import com.example.sverigesradioapi.model.entity.SRMessage;
+import com.example.sverigesradioapi.model.SRNews;
+import com.example.sverigesradioapi.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
